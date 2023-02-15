@@ -44,7 +44,7 @@ import org.springframework.util.StringUtils;
  * interfaces and registers them as {@code MapperFactoryBean}. Note that only interfaces with at
  * least one method will be registered; concrete classes will be ignored.
  * <p>
- * This class was a {code BeanFactoryPostProcessor} until 1.0.1 version. It changed to  
+ * This class was a {code BeanFactoryPostProcessor} until 1.0.1 version. It changed to
  * {@code BeanDefinitionRegistryPostProcessor} in 1.0.2. See https://jira.springsource.org/browse/SPR-8269
  * for the details.
  * <p>
@@ -64,9 +64,9 @@ import org.springframework.util.StringUtils;
  * cannot be used. In this case you must explicitly specify either an {@code SqlSessionFactory} or
  * an {@code SqlSessionTemplate} to use via the <em>bean name</em> properties. Bean names are used
  * rather than actual objects because Spring does not initialize property placeholders until after
- * this class is processed. 
+ * this class is processed.
  * <p>
- * Passing in an actual object which may require placeholders (i.e. DB user password) will fail. 
+ * Passing in an actual object which may require placeholders (i.e. DB user password) will fail.
  * Using bean names defers actual object creation until later in the startup
  * process, after all placeholder substitution is completed. However, note that this configurer
  * does support property placeholders of its <em>own</em> properties. The <code>basePackage</code>
@@ -295,7 +295,7 @@ public class MapperScannerConfigurer implements BeanDefinitionRegistryPostProces
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @since 1.0.2
    */
   @Override

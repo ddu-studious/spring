@@ -269,7 +269,7 @@ public final class MapperScannerConfigurerTest {
       // success
     }
   }
-  
+
   public static class BeanNameGenerator implements org.springframework.beans.factory.support.BeanNameGenerator {
 
     @Override

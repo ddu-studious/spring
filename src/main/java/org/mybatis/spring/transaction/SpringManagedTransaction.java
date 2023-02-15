@@ -120,7 +120,7 @@ public class SpringManagedTransaction implements Transaction {
   public void close() throws SQLException {
     DataSourceUtils.releaseConnection(this.connection, this.dataSource);
   }
-    
+
   /**
    * {@inheritDoc}
    */
@@ -129,7 +129,7 @@ public class SpringManagedTransaction implements Transaction {
     ConnectionHolder holder = (ConnectionHolder) TransactionSynchronizationManager.getResource(dataSource);
     if (holder != null && holder.hasTimeout()) {
       return holder.getTimeToLiveInSeconds();
-    } 
+    }
     return null;
   }
 

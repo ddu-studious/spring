@@ -130,7 +130,7 @@ public void insertUsers(List<User> users) {
     sqlSession.insert("org.mybatis.spring.sample.mapper.UserMapper.insertUser", user);
   }
 }]]></source>
-  
+
       <p>
         Note that this configuration style only needs to be used if the desired
         execution method differs from the default set for the

@@ -32,7 +32,7 @@ import org.w3c.dom.Element;
 /**
  * A {#code BeanDefinitionParser} that handles the element scan of the MyBatis.
  * namespace
- * 
+ *
  * @author Lishu Luo
  * @author Eduardo Macarron
  *

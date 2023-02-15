@@ -19,7 +19,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 public interface UserMapper {
-  
+
     @Insert("INSERT INTO USERS VALUES(#{id}, #{name})")
     void save(User user);
 

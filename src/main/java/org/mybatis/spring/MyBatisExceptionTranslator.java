@@ -75,7 +75,7 @@ public class MyBatisExceptionTranslator implements PersistenceExceptionTranslato
         throw (TransactionException) e.getCause();
       }
       return new MyBatisSystemException(e);
-    } 
+    }
     return null;
   }
 

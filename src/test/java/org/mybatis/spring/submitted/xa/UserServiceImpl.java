@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     userMapperMaster.save(user);
     userMapperSlave.save(user);
   }
-  
+
   @Override
   @Transactional
   public void saveWithFailure(User user) {

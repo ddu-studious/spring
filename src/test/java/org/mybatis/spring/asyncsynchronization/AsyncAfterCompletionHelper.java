@@ -26,18 +26,18 @@ import org.springframework.transaction.support.TransactionSynchronization;
 
 /**
  * For use as ByteMan helper
- * 
+ *
  * @author Alex Rykov
  */
 @SuppressWarnings("unused")
 public class AsyncAfterCompletionHelper {
   /**
-   * 
-   * Invocation handler that performs afterCompletion on a separate thread 
+   *
+   * Invocation handler that performs afterCompletion on a separate thread
    * See Github issue #18
-   * 
+   *
    * @author Alex Rykov
-   * 
+   *
    */
   static class AsyncAfterCompletionInvocationHandler implements InvocationHandler {
 
@@ -80,7 +80,7 @@ public class AsyncAfterCompletionHelper {
 
   /**
    * Creates proxy that performs afterCompletion call on a separate thread
-   * 
+   *
    * @param synchronization
    * @return
    */

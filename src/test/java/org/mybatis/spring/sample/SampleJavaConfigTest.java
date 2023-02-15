@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 /**
- * MyBatis @Configuration style sample 
+ * MyBatis @Configuration style sample
  */
 package org.mybatis.spring.sample;
 

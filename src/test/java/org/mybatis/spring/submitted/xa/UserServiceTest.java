@@ -30,17 +30,17 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 public class UserServiceTest {
 
   @Autowired UserTransaction userTransaction;
-  
+
   @Autowired
   private UserService userService;
-  
+
   @Test
   void testCommit() {
     User user = new User(1, "Pocoyo");
     userService.saveWithNoFailure(user);
     assertThat(userService.checkUserExists(user.getId())).isTrue();
   }
-  
+
   @Test
   void testRollback() {
     User user = new User(2, "Pocoyo");
@@ -61,7 +61,7 @@ public class UserServiceTest {
     assertThat(userService.checkUserExists(user.getId())).isTrue();
   }
 
-  // TODO when the outer JTA tx is rolledback, 
+  // TODO when the outer JTA tx is rolledback,
   // SqlSession should be rolledback but it is committed
   // because Spring calls beforeCommmit from its TX interceptor
   // then, the JTA TX may be rolledback.
@@ -73,5 +73,5 @@ public class UserServiceTest {
     userTransaction.rollback();
     assertThat(userService.checkUserExists(user.getId())).isFalse();
   }
-  
+
 }

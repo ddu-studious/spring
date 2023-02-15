@@ -36,7 +36,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
  * Handles MyBatis SqlSession life cycle. It can register and get SqlSessions from
  * Spring {@code TransactionSynchronizationManager}. Also works if no transaction is active.
  *
- * @author Hunter Presnall 
+ * @author Hunter Presnall
  * @author Eduardo Macarron
  */
 public final class SqlSessionUtils {
@@ -109,7 +109,7 @@ public final class SqlSessionUtils {
    * transaction either through DataSourceTxMgr or another tx synchronization.
    * Further assume that if an exception is thrown, whatever started the transaction will
    * handle closing / rolling back the Connection associated with the SqlSession.
-   * 
+   *
    * @param sessionFactory sqlSessionFactory used for registration.
    * @param executorType executorType used for registration.
    * @param exceptionTranslator persistenceExceptionTranslator used for registration.
@@ -259,7 +259,7 @@ public final class SqlSessionUtils {
       // But, do cleanup the SqlSession / Executor, including flushing BATCH statements so
       // they are actually executed.
       // SpringManagedTransaction will no-op the commit over the jdbc connection
-      // TODO This updates 2nd level caches but the tx may be rolledback later on! 
+      // TODO This updates 2nd level caches but the tx may be rolledback later on!
       if (TransactionSynchronizationManager.isActualTransactionActive()) {
         try {
           LOGGER.debug(() -> "Transaction synchronization committing SqlSession [" + this.holder.getSqlSession() + "]");

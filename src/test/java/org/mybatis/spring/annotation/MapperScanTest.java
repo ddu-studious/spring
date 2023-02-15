@@ -234,7 +234,7 @@ public final class MapperScanTest {
     applicationContext.registerBeanDefinition("sqlSessionTemplate", definition);
 
     applicationContext.register(AppConfigWithSqlSessionTemplate.class);
-    
+
     startContext();
 
     // all interfaces with methods should be loaded
@@ -242,7 +242,7 @@ public final class MapperScanTest {
     applicationContext.getBean("mapperSubinterface");
     applicationContext.getBean("mapperChildInterface");
     applicationContext.getBean("annotatedMapper");
-    
+
   }
 
   @Test
